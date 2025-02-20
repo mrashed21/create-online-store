@@ -11,6 +11,7 @@ import {
   MdOutlineCurrencyExchange,
   MdOutlineEditLocationAlt,
 } from "react-icons/md";
+import Swal from "sweetalert2";
 interface FormValues {
   name: string;
   domain: string;
@@ -56,25 +57,57 @@ const CreateStoreForm = () => {
     }
   };
 
+  // const onSubmit = async (data: FormValues) => {
+  //   setIsSubmitting(true);
+  //   try {
+  //     const response = await axios.post(
+  //       "https://interview-task-green.vercel.app/task/stores/create",
+  //       data
+  //     );
+  //     console.log("Store created:", response.data);
+  //     alert("Store created successfully!");
+  //   } catch (error) {
+  //     console.error("Error creating store:", error);
+  //     alert("Failed to create store");
+  //   }
+  //   setIsSubmitting(false);
+  // };
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     try {
       const response = await axios.post(
         "https://interview-task-green.vercel.app/task/stores/create",
-        data
+        {
+          name: data.name,
+          currency: data.currency,
+          country: data.country,
+          domain: data.domain,
+          category: data.category,
+          email: data.email,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
       );
-      console.log("Store created:", response.data);
-      alert("Store created successfully!");
+      Swal.fire({
+        title: "Store created successfully!",
+        icon: "success",
+        draggable: true,
+      });
     } catch (error) {
-      console.error("Error creating store:", error);
-      alert("Failed to create store");
+      Swal.fire({
+        title: "Failed to create store",
+        icon: "error",
+        draggable: true,
+      });
     }
     setIsSubmitting(false);
   };
-
   return (
-    <div className="min-h-screen bg-gray-50 p-4 md:p-8">
-      <div className="max-w-7xl mx-auto">
+    <div className=" bg-gray-50 p-4 lg:p-8">
+      <div className="container mx-auto">
         {/* form */}
         <div className="">
           <div className="bg-white shadow-xl rounded-lg p-6 space-y-6">
@@ -82,7 +115,7 @@ const CreateStoreForm = () => {
               <h2 className="text-2xl font-bold text-gray-900">
                 Create a store
               </h2>
-              <p className="mt-1 text-sm text-gray-600">
+              <p className="mt-1  text-gray-600 text-lg">
                 Add your basic store information and complete the setup
               </p>
               <hr className="border-b-2 mt-3" />
@@ -90,10 +123,10 @@ const CreateStoreForm = () => {
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               {/* Store Name */}
-              <div className="md:flex items-center gap-2 justify-between">
+              <div className="lg:flex items-center gap-2 justify-between">
                 {/* left-side */}
                 {/* item-2 */}
-                <div className="flex items-stretch  gap-4 w-full md:w-1/2">
+                <div className="flex items-stretch  gap-4 w-full lg:w-1/2">
                   {/* icon */}
                   <div className="mt-2">
                     <FiMonitor className="text-blue-500 text-2xl" />
@@ -110,7 +143,7 @@ const CreateStoreForm = () => {
                   </div>
                 </div>
                 {/* right-side */}
-                <div className="w-full md:w-1/2">
+                <div className="w-full lg:w-1/2 mt-3 px-7 lg:mt-0 lg:px-0">
                   <input
                     {...register("name", {
                       required: "Store name is required",
@@ -132,9 +165,9 @@ const CreateStoreForm = () => {
               </div>
 
               {/* Domain */}
-              <div className="md:flex items-center gap-2 justify-between">
+              <div className="lg:flex items-center gap-2 justify-between">
                 {/* right-side */}
-                <div className="flex items-stretch  gap-4 w-full md:w-1/2">
+                <div className="flex items-stretch  gap-4 w-full lg:w-1/2">
                   {/* icon */}
                   <div className="mt-2">
                     <FaGlobeAsia className="text-blue-500 text-2xl" />
@@ -150,7 +183,7 @@ const CreateStoreForm = () => {
                 </div>
 
                 {/* left-side */}
-                <div className="w-full md:w-1/2">
+                <div className="w-full lg:w-1/2 mt-3 px-7 lg:mt-0 lg:px-0">
                   <div className="mt-1 flex rounded-md shadow-sm relative">
                     <input
                       {...register("domain", {
@@ -183,9 +216,9 @@ const CreateStoreForm = () => {
               </div>
 
               {/* Country */}
-              <div className="md:flex items-center gap-2 justify-between">
+              <div className="lg:flex items-center gap-2 justify-between">
                 {/* right-side */}
-                <div className="flex items-stretch  gap-4 w-full md:w-1/2">
+                <div className="flex items-stretch  gap-4 w-full lg:w-1/2">
                   {/* icon */}
                   <div className="mt-2">
                     <MdOutlineEditLocationAlt className="text-blue-500 text-2xl" />
@@ -202,7 +235,7 @@ const CreateStoreForm = () => {
                   </div>
                 </div>
                 {/* left side */}
-                <div className="w-full md:w-1/2">
+                <div className="w-full lg:w-1/2 mt-3 px-7 lg:mt-0 lg:px-0">
                   <select
                     {...register("country", {
                       required: "Country is required",
@@ -219,9 +252,9 @@ const CreateStoreForm = () => {
               </div>
 
               {/* Category */}
-              <div className="md:flex items-center gap-2 justify-between">
+              <div className="lg:flex items-center gap-2 justify-between">
                 {/* right-side */}
-                <div className="flex items-stretch  gap-4 w-full md:w-1/2">
+                <div className="flex items-stretch  gap-4 w-full lg:w-1/2">
                   {/* icon */}
                   <div className="mt-2">
                     <MdCategory className="text-2xl text-blue-500" />
@@ -236,7 +269,7 @@ const CreateStoreForm = () => {
                   </div>
                 </div>
                 {/* left side */}
-                <div className="w-full md:w-1/2">
+                <div className="w-full lg:w-1/2 mt-3 px-7 lg:mt-0 lg:px-0">
                   <select
                     {...register("category", {
                       required: "Category is required",
@@ -251,9 +284,9 @@ const CreateStoreForm = () => {
               </div>
 
               {/* Currency */}
-              <div className="md:flex items-center gap-2 justify-between">
+              <div className="lg:flex items-center gap-2 justify-between">
                 {/* right-side */}
-                <div className="flex items-stretch  gap-4 w-full md:w-1/2">
+                <div className="flex items-stretch  gap-4 w-full lg:w-1/2">
                   {/* icon */}
                   <div className="mt-2">
                     <MdOutlineCurrencyExchange className="text-2xl text-blue-500" />
@@ -265,7 +298,7 @@ const CreateStoreForm = () => {
                   </div>
                 </div>
                 {/* left side */}
-                <div className="w-full md:w-1/2">
+                <div className="w-full lg:w-1/2 mt-3 px-7 lg:mt-0 lg:px-0">
                   <select
                     {...register("currency", {
                       required: "Currency is required",
@@ -279,9 +312,9 @@ const CreateStoreForm = () => {
               </div>
 
               {/* Email */}
-              <div className="md:flex items-center gap-2 justify-between">
+              <div className="lg:flex items-center gap-2 justify-between">
                 {/* right-side */}
-                <div className="flex items-stretch  gap-4 w-full md:w-1/2">
+                <div className="flex items-stretch  gap-4 w-full lg:w-1/2">
                   {/* icon */}
                   <div className="mt-2">
                     <CiMail className="text-2xl text-blue-500 font-bold" />
@@ -296,7 +329,7 @@ const CreateStoreForm = () => {
                   </div>
                 </div>
                 {/* left side */}
-                <div className="w-full md:w-1/2">
+                <div className="w-full lg:w-1/2 mt-3 px-7 lg:mt-0 lg:px-0">
                   <input
                     {...register("email", {
                       required: "Email is required",
