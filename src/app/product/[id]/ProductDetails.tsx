@@ -30,17 +30,23 @@ const ProductDetails = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch(
-          "https://glore-bd-backend-node-mongo.vercel.app/api/product"
-        );
+        const response = await fetch("/product.json"); // Fetch from local JSON file
+        if (!response.ok) {
+          throw new Error("Failed to load product data");
+        }
         const data = await response.json();
-        setProducts(data?.data);
+        if (Array.isArray(data?.data)) {
+          setProducts(data.data);
+        } else {
+          console.error("Invalid JSON format:", data);
+        }
       } catch (error) {
         console.error("Error fetching products:", error);
       } finally {
         setLoading(false);
       }
     };
+
     fetchProducts();
   }, []);
 

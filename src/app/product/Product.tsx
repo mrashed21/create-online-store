@@ -107,7 +107,7 @@ const Product = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("/product.json"); // ✅ Fixed path
+        const response = await axios.get("/product.json");
         if (Array.isArray(response.data?.data)) {
           setProducts(response.data.data);
         } else {
