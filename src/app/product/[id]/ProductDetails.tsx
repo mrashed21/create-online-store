@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
 "use client";
-import { ArrowLeft, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -60,7 +59,7 @@ const ProductDetails = () => {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <Loader2 className="w-8 h-8 animate-spin text-blue-500" />
+        <h1>loading</h1>
       </div>
     );
   }
@@ -73,7 +72,6 @@ const ProductDetails = () => {
           href="/product"
           className="text-blue-500 hover:text-blue-600 flex items-center gap-2"
         >
-          <ArrowLeft size={20} />
           Back to Product
         </Link>
       </div>
@@ -81,97 +79,60 @@ const ProductDetails = () => {
   }
 
   return (
-    <div className=" bg-white">
-      <div className="container mx-auto px-4 pb-16">
-        {/* Left Column - Images & Video */}
-        <div className="flex ">
-          {/* Main Image */}
-          <div className="aspect-square w-full overflow-hidden rounded-lg bg-gray-50">
-            <img
-              src={product.images[0].optimizeUrl}
-              alt={product.name}
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-          </div>
-
-          {/* Video */}
-          {product.video?.secure_url && (
-            <div className="aspect-video w-full overflow-hidden rounded-lg bg-gray-50">
-              <video
-                controls
-                className="w-full h-full object-cover"
-                src={product.video.secure_url}
-              />
-            </div>
-          )}
+    <div className="container flex flex-col lg:flex-row gap-7 mx-auto  my-10 bg-white p-10 rounded-lg shadow-lg">
+      {/* Left Column - Images & Video */}
+      <div className="w-full lg:w-1/2 space-y-8">
+        {/* Main Image */}
+        <div className="w-full  overflow-hidden rounded-lg bg-gray-50">
+          <img
+            src={product.images[0].optimizeUrl}
+            alt={product.name}
+            className="w-full h-60 object-cover"
+            loading="lazy"
+          />
         </div>
 
-        {/* Right Column - Product Information */}
-        <div className="flex flex-col gap-6">
-          {/* Category */}
-          <div className="text-sm font-medium text-blue-600">
-            {product.category.name}
+        {/* Video */}
+        {product.video?.secure_url && (
+          <div className="w-full overflow-hidden rounded-lg bg-gray-50">
+            <video
+              controls
+              className="w-full h-56 object-cover"
+              src={product.video.secure_url}
+            />
           </div>
+        )}
+      </div>
 
-          {/* Product Name */}
-          <h1 className="text-3xl font-semibold text-gray-900">
-            {product.name}
-          </h1>
+      {/* Right Column - Product Information */}
+      <div className="flex flex-col gap-6 w-full lg:w-1/2">
+        {/* Category */}
+        <div className="text-sm font-medium text-blue-600">
+          {product.category.name}
+        </div>
 
-          {/* Price */}
-          <div className="text-2xl font-medium text-gray-900">
-            ${product.price}
-          </div>
+        {/* Product Name */}
+        <h1 className="text-3xl font-semibold text-gray-900">{product.name}</h1>
 
-          {/* Description */}
-          <div className="prose prose-gray">
-            <h2 className="text-xl font-medium text-gray-900 mb-3">
-              Description
-            </h2>
-            <p className="text-gray-600 leading-relaxed">
-              {product.description}
-            </p>
-          </div>
+        {/* Price */}
+        <div className="text-2xl font-medium text-gray-900">
+          ${product.price}
+        </div>
 
-          {/* Additional Details */}
-          <div className="mt-6 pt-6 border-t border-gray-200">
-            <h2 className="text-xl font-medium text-gray-900 mb-4">
-              Product Details
-            </h2>
-            <dl className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <div>
-                <dt className="text-sm text-gray-500">Category</dt>
-                <dd className="mt-1 text-sm font-medium text-gray-900">
-                  {product.category.name}
-                </dd>
-              </div>
-              <div>
-                <dt className="text-sm text-gray-500">Product ID</dt>
-                <dd className="mt-1 text-sm font-medium text-gray-900">
-                  {product._id.slice(-8).toUpperCase()}
-                </dd>
-              </div>
-              <div>
-                <dt className="text-sm text-gray-500">Added On</dt>
-                <dd className="mt-1 text-sm font-medium text-gray-900">
-                  {new Date(product.createdAt).toLocaleDateString()}
-                </dd>
-              </div>
-            </dl>
-          </div>
+        {/* Description */}
+        <div className="prose prose-gray">
+          <h2 className="text-xl font-medium text-gray-900 mb-3">
+            Description
+          </h2>
+          <p className="text-gray-600 leading-relaxed">{product.description}</p>
         </div>
 
         {/* Navigation */}
-        <div className="max-w-7xl mx-auto px-4 py-6">
-          <Link
-            href="/product"
-            className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors"
-          >
-            <ArrowLeft className="w-5 h-5 mr-2" />
+        <Link href="/product">
+          <button className="mt-3 text-xl text-white px-4 w-full py-2 bg-blue-700 rounded-md hover:bg-blue-950 hover:text-gray-200 transition duration-300">
             Back to Product
-          </Link>
-        </div>
+          </button>
+        </Link>
       </div>
     </div>
   );

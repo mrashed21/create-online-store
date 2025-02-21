@@ -3,7 +3,7 @@
     {
       "_id": "67881f5d62f1acc9670fe721",
       "name": "Prodcut 1",
-      "description": "description 1",
+      "description": "This elegant three-piece dress for women is designed to offer both comfort and style. Made from high-quality fabric, it includes a long kameez, a matching salwar, and a beautifully crafted dupatta. The intricate embroidery and stylish design make it perfect for casual outings, festive occasions, and formal events. Whether you're attending a wedding or a family gathering, this outfit will keep you looking graceful and sophisticated. Available in various sizes and colors, this three-piece set ensures a perfect fit for all body types.",
       "category": {
         "_id": "67881d7362f1acc9670fe71e",
         "name": "Category 3"
@@ -28,7 +28,7 @@
     {
       "_id": "67881fa162f1acc9670fe724",
       "name": "Prodcut 2",
-      "description": "description 2",
+      "description": "Our stylish and comfortable women's three-piece dress is the ideal choice for everyday wear as well as special occasions. This set features a well-fitted kameez with delicate patterns, a soft and breathable salwar, and a lightweight dupatta to complete the look. Designed for both elegance and ease of movement, this outfit is perfect for women who want a blend of traditional and contemporary fashion. Pair it with your favorite accessories for a chic and timeless appeal.",
       "category": {
         "_id": "67881d7362f1acc9670fe71e",
         "name": "Category 3"
@@ -53,7 +53,7 @@
     {
       "_id": "67881fec62f1acc9670fe727",
       "name": "Prodcut 3",
-      "description": "description 3",
+      "description": "Step out in confidence with this trendy three-piece dress, designed for modern women who love to embrace traditional elegance. This outfit includes a beautifully tailored kameez with fine detailing, a comfortable salwar, and a stylish dupatta that adds a touch of sophistication. Whether for office wear, casual outings, or festive gatherings, this three-piece set provides a versatile and fashionable look. Crafted from premium fabric, it ensures durability and breathability throughout the day.",
       "category": {
         "_id": "67881d7362f1acc9670fe71e",
         "name": "Category 3"
@@ -78,7 +78,7 @@
     {
       "_id": "6788211662f1acc9670fe72a",
       "name": "Prodcut 4",
-      "description": "description 4",
+      "description": "This beautifully crafted three-piece set is perfect for women who appreciate both style and comfort. The outfit features a stylishly designed kameez, a soft and flowing salwar, and a lightweight dupatta that enhances the overall elegance. The high-quality fabric ensures breathability and comfort, making it ideal for all-day wear. Whether you are dressing up for a party, a cultural event, or a formal gathering, this three-piece dress will make you stand out with its exquisite design and flawless fit",
       "category": {
         "_id": "67881d7362f1acc9670fe71e",
         "name": "Category 3"
