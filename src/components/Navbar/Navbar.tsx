@@ -14,7 +14,9 @@ const Navbar = () => {
     <nav className="bg-white py-3 shadow-md">
       <section className="container mx-auto flex justify-between items-center px-4 ">
         {/* Logo section */}
-        <div className="text-3xl font-medium">Create Online Store</div>
+        <div className=" text-2xl lg:text-3xl font-medium">
+          Create Online Store
+        </div>
 
         {/* Hamburger menu */}
         <button className="lg:hidden" onClick={toggleMenu}>
