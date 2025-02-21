@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "_id": "67881f5d62f1acc9670fe721",
+      "name": "Prodcut 1",
+      "description": "description 1",
+      "category": {
+        "_id": "67881d7362f1acc9670fe71e",
+        "name": "Category 3"
+      },
+      "images": [
+        {
+          "public_id": "Prodcut 161",
+          "secure_url": "https://res.cloudinary.com/dmoxym9g7/image/upload/v1736934672/Prodcut%20161.png",
+          "optimizeUrl": "https://res.cloudinary.com/dmoxym9g7/image/upload/f_auto,q_auto/Prodcut%20161?_a=BAMCkGTG0"
+        }
+      ],
+      "video": {
+        "public_id": "Prodcut 1",
+        "secure_url": "https://res.cloudinary.com/dmoxym9g7/video/upload/v1736934692/Prodcut%201.mp4"
+      },
+      "status": true,
+      "price": "100",
+      "createdAt": "2025-01-15T20:49:33.037Z",
+      "updatedAt": "2025-01-15T20:49:33.037Z",
+      "__v": 0
+    },
+    {
+      "_id": "67881fa162f1acc9670fe724",
+      "name": "Prodcut 2",
+      "description": "description 2",
+      "category": {
+        "_id": "67881d7362f1acc9670fe71e",
+        "name": "Category 3"
+      },
+      "images": [
+        {
+          "public_id": "Prodcut 2668",
+          "secure_url": "https://res.cloudinary.com/dmoxym9g7/image/upload/v1736934735/Prodcut%202668.jpg",
+          "optimizeUrl": "https://res.cloudinary.com/dmoxym9g7/image/upload/f_auto,q_auto/Prodcut%202668?_a=BAMCkGTG0"
+        }
+      ],
+      "video": {
+        "public_id": "Prodcut 2",
+        "secure_url": "https://res.cloudinary.com/dmoxym9g7/video/upload/v1736934760/Prodcut%202.mp4"
+      },
+      "status": true,
+      "price": "100",
+      "createdAt": "2025-01-15T20:50:41.311Z",
+      "updatedAt": "2025-01-15T20:50:41.311Z",
+      "__v": 0
+    },
+    {
+      "_id": "67881fec62f1acc9670fe727",
+      "name": "Prodcut 3",
+      "description": "description 3",
+      "category": {
+        "_id": "67881d7362f1acc9670fe71e",
+        "name": "Category 3"
+      },
+      "images": [
+        {
+          "public_id": "Prodcut 357",
+          "secure_url": "https://res.cloudinary.com/dmoxym9g7/image/upload/v1736934815/Prodcut%20357.png",
+          "optimizeUrl": "https://res.cloudinary.com/dmoxym9g7/image/upload/f_auto,q_auto/Prodcut%20357?_a=BAMCkGTG0"
+        }
+      ],
+      "video": {
+        "public_id": "Prodcut 3",
+        "secure_url": "https://res.cloudinary.com/dmoxym9g7/video/upload/v1736934835/Prodcut%203.mp4"
+      },
+      "status": true,
+      "price": "100",
+      "createdAt": "2025-01-15T20:51:56.791Z",
+      "updatedAt": "2025-01-15T20:51:56.791Z",
+      "__v": 0
+    },
+    {
+      "_id": "6788211662f1acc9670fe72a",
+      "name": "Prodcut 4",
+      "description": "description 4",
+      "category": {
+        "_id": "67881d7362f1acc9670fe71e",
+        "name": "Category 3"
+      },
+      "images": [
+        {
+          "public_id": "Prodcut 4139",
+          "secure_url": "https://res.cloudinary.com/dmoxym9g7/image/upload/v1736935118/Prodcut%204139.jpg",
+          "optimizeUrl": "https://res.cloudinary.com/dmoxym9g7/image/upload/f_auto,q_auto/Prodcut%204139?_a=BAMCkGTG0"
+        }
+      ],
+      "video": {
+        "public_id": "Prodcut 4",
+        "secure_url": "https://res.cloudinary.com/dmoxym9g7/video/upload/v1736935134/Prodcut%204.mp4"
+      },
+      "status": true,
+      "price": "100",
+      "createdAt": "2025-01-15T20:56:54.096Z",
+      "updatedAt": "2025-01-15T20:56:54.096Z",
+      "__v": 0
+    }
+  ]
+}
