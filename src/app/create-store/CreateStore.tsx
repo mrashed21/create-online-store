@@ -120,7 +120,7 @@ const CreateStoreForm = () => {
                   </div>
                 </div>
                 {/* right-side */}
-                <div className="w-full lg:w-1/2 mt-3 px-7 lg:mt-0 lg:px-0">
+                <div className="w-full lg:w-1/2 mt-3  lg:mt-0 ">
                   <input
                     {...register("name", {
                       required: "Store name is required",
@@ -160,7 +160,7 @@ const CreateStoreForm = () => {
                 </div>
 
                 {/* left-side */}
-                <div className="w-full lg:w-1/2 mt-3 px-7 lg:mt-0 lg:px-0">
+                <div className="w-full lg:w-1/2 mt-3  lg:mt-0 ">
                   <div className="mt-1 flex rounded-md shadow-sm relative">
                     <input
                       {...register("domain", {
@@ -212,7 +212,7 @@ const CreateStoreForm = () => {
                   </div>
                 </div>
                 {/* left side */}
-                <div className="w-full lg:w-1/2 mt-3 px-7 lg:mt-0 lg:px-0">
+                <div className="w-full lg:w-1/2 mt-3  lg:mt-0 ">
                   <select
                     {...register("country", {
                       required: "Country is required",
@@ -246,7 +246,7 @@ const CreateStoreForm = () => {
                   </div>
                 </div>
                 {/* left side */}
-                <div className="w-full lg:w-1/2 mt-3 px-7 lg:mt-0 lg:px-0">
+                <div className="w-full lg:w-1/2 mt-3  lg:mt-0 ">
                   <select
                     {...register("category", {
                       required: "Category is required",
@@ -275,7 +275,7 @@ const CreateStoreForm = () => {
                   </div>
                 </div>
                 {/* left side */}
-                <div className="w-full lg:w-1/2 mt-3 px-7 lg:mt-0 lg:px-0">
+                <div className="w-full lg:w-1/2 mt-3  lg:mt-0 ">
                   <select
                     {...register("currency", {
                       required: "Currency is required",
@@ -306,7 +306,7 @@ const CreateStoreForm = () => {
                   </div>
                 </div>
                 {/* left side */}
-                <div className="w-full lg:w-1/2 mt-3 px-7 lg:mt-0 lg:px-0">
+                <div className="w-full lg:w-1/2 mt-3  lg:mt-0 ">
                   <input
                     {...register("email", {
                       required: "Email is required",
